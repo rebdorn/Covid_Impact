@@ -1,14 +1,10 @@
 # Covid_Impact
-I provide national level estimates of intersections between uninsured American populations and various experiences.
+I provide national level estimates of intersections between Americans uninsured on unemployment benefits, and race/ethnicity, gender, education level, living with children, food security, and housing payment stability. 
 
 Data:
-- Data used is Census' Household Experiences During Coronavirus Pandemic Survey (Household Pulse Survey) data from Week 13 (August 19, 2020 through August 31, 2020). 
+- Data used is Census' Household Experiences During Coronavirus Pandemic Survey (Household Pulse Survey) data from Weeks 20 (November 25, 2020 through December 7, 2020) and 21 (December 9, 2020 through December 21, 2020). 
+- Week 20 had 72,484 survey respondents. Week 21 had 69,944 survey respondents.
 - Sample sizes chosen for survey to provide estimates for 40% of the United States population. 39 highest population states hold 3% coefficient of variation, 11 lowest population states hold 3.5% coefficient of variation.
-- 109,051 respondents out of the 1,032,959 person sample size for week 13
-- Counts altered to account for gender and racial biases in survey respondants. Weights are adjusted for nonresponse, adults per house, and sample size coverage.
-- As the nonsampling error is not fully known, estimates should not be treated as estimates, not literal figures.
+- Weights are adjusted for nonresponse, adults per house, sample size coverage based on states demographics, and a raking procedure explicated in the Household Pulse Survey technical documentation.
 
-To run estimates:
-- Because the csv files are too large (even when compressed), download the following data and add to git repository: https://www2.census.gov/programs-surveys/demo/datasets/hhp/2020/wk13/HPS_Week13_PUF_CSV.zip
-- Run jupyter notebook "generate_estimates.ipynb"
-- Pandas and Numpy are required.
+To run estimates, run jupyter notebook "generate_estimates.ipynb". Note that pandas and matplotlib are required.
